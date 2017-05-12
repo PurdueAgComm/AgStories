@@ -53,6 +53,10 @@ var _gaq = _gaq || [];
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 // ]]></script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=agcomm"></script>
+
 					<?php
 					if(is_active_sidebar('head-code')){
 					dynamic_sidebar('head-code');
