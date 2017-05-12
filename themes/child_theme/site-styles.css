@@ -52,3 +52,286 @@
   width: 100%;
   height: 100%;
 }
+
+
+/** homepage stories css **/
+
+h2.topstory {
+    padding-top: 0;
+}
+
+.newsandeventslink {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.primarytitle{
+    min-height: 182px;
+    text-align: center;
+    /*border-bottom: black 5px solid;*/
+}
+.primarystory{
+  margin-bottom:20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    background-color: white;
+    border-left: 7px solid #FFD100;
+    margin-right: 15px;
+}
+
+.primarystorypic{
+  margin: auto;
+
+}
+
+.primarybutton{
+  background-color:#ffd100;
+  margin:20px;
+  padding:10px;
+}
+
+.white{
+color:#fff !important;
+}
+.picpadding{
+    padding-left: 0;
+    margin-bottom: 0;
+
+}
+
+
+
+.secondary{
+    margin-bottom: 25px;
+    padding-left:0px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  min-height:171px;
+  background-color: white;
+}
+
+.secondarystorytitle {
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.secondaryimage{
+height:178px;
+}
+
+
+@media (max-width: 992px){
+.secondary{
+  min-height:200px;
+  }
+}
+
+.centersmall{
+  margin: auto;
+}
+
+.centertext{
+
+}
+
+.fountainborder{
+  border-left: solid 7px #2EAF9B;
+}
+.mackeyborder{
+  border-left: solid 7px #FF9B1A;
+}
+
+.pappysborder{
+  border-left: solid 7px #AD1F65;
+}
+
+
+@media (min-width: 1200px){
+.primarystory{
+    width: 48%;
+  }
+
+
+}
+
+@media (max-width: 768px){
+.centertext{
+  text-align:center;
+  }
+
+}
+
+@media (min-width: 992px){
+.primarystory{
+    margin-right: 18px
+  }
+
+}
+
+.featuredstorytitle{
+  font-weight: 600;
+  margin-bottom:20px;
+
+}
+
+
+/** hover effect for homepage stories **/
+
+@media (min-width: 992px){
+
+/* Common style */
+.grids figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  min-width: 100%;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grids figure img {
+  position: relative;
+  display: block;
+  min-height: 117px;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grids figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grids figure figcaption::before,
+.grids figure figcaption::after {
+  pointer-events: none;
+}
+
+.grids figure figcaption,
+.grids figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grids figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grids figure h2,
+.grids figure p {
+  margin: 0;
+}
+
+.grids figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+.primarygrid{
+  height:350px;
+}
+
+/*---------------*/
+/***** Ruby *****/
+/*---------------*/
+
+figure.effect-ruby :hover {
+
+background-color: rgba(10,10,10,.4);
+}
+
+figure.effect-ruby img {
+  opacity: 1;
+  background-color: #17819c;
+}
+
+#firstfeature:hover figure.effect-ruby img {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  background-color: #17819c;
+}
+
+figure.effect-ruby h2 {
+  margin-top: 20%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
+  }
+
+figure.effect-ruby p {
+  margin: 1em 0 0;
+  padding: 3em;
+  border: 1px solid #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.85s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0) scale(1.1);
+  transform: translate3d(0,20px,0) scale(1.1);
+}
+
+#firstfeature:hover figure.effect-ruby p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0) scale(1);
+  transform: translate3d(0,0,0) scale(1);
+  background-color: rgba(10,10,10,.5);
+}
+
+}
+
+.recent-story {
+  text-align: center;
+  margin: 0 auto;
+}
+
+  .recent-story h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+.news-release {
+  border-left: 3px solid #FFD100;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+  .news-release:hover {
+    background-color: #fafafa;
+  }
+
+  .news-release h4 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .date-meta {
+    margin-bottom: 8px;
+
+  }
+
+.story-cat {
+  border-left: 3px solid #ffd100;
+  padding: 20px;
+}
+
+.exposure-heading {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
