@@ -90,5 +90,41 @@
 </div>
 
 <?php wp_footer(); ?>
+
+<script type="text/javascript">
+  $jQ(function() {
+      $jQ('#fitin div').css('font-size', '1.5em');
+
+      while( $jQ('#fitin div').height() > $jQ('#fitin').height() ) {
+          $jQ('#fitin div').css('font-size', (parseInt($jQ('#fitin div').css('font-size')) - 1) + "px" );
+      }
+
+  });
+  $jQ(function() {
+      $jQ('#fitin2 div').css('font-size', '1.5em');
+
+      while( $jQ('#fitin2 div').height() > $jQ('#fitin2').height() ) {
+          $jQ('#fitin2 div').css('font-size', (parseInt($jQ('#fitin2 div').css('font-size')) - 1) + "px" );
+      }
+
+  });
+
+  $jQ(function() {
+      $jQ('#fitin3 div').css('font-size', '1.5em');
+
+      while( $jQ('#fitin3 div').height() > $jQ('#fitin3').height() ) {
+          $jQ('#fitin3 div').css('font-size', (parseInt($jQ('#fitin3 div').css('font-size')) - 1) + "px" );
+      }
+
+  });
+  $jQ(function() {
+      $jQ('#fitinprimary div').css('font-size', '1.5em');
+
+      while( $jQ('#fitinprimary div').height() > $jQ('#fitinprimary').height() ) {
+          $jQ('#fitinprimary div').css('font-size', (parseInt($jQ('#fitinprimary div').css('font-size')) - 1) + "px" );
+      }
+
+  });
+</script>
 </body>
 </html>
