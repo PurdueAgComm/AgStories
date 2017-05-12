@@ -31,7 +31,7 @@ get_header(); ?>
         <?php if(has_category() || has_tag()) : ?>
           <div class="blog-meta">
             <?php if(has_category()) : ?>
-              <i class="fa fa-folder" title="category"></i> Category <?php the_category(', '); ?> <br>
+              <i class="fa fa-folder" title="category"></i> Category: <?php the_category(', '); ?> <br>
             <?php endif; ?>
             <?php if(has_tag()) : ?>
               <i class="fa fa-tags"></i> Tag: <?php the_tags(''); ?>
