@@ -145,7 +145,7 @@ get_header(); ?>
           $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
           $link = $feed[$x]['link'];
           $description = $feed[$x]['desc'];
-          $date = date('l F d, Y', strtotime($feed[$x]['date']));
+          $date = date('F d, Y', strtotime($feed[$x]['date']));
 
           $xpath = new DOMXPath(@DOMDocument::loadHTML($description));
           $src = $xpath->evaluate("string(//img/@src)");
