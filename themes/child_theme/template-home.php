@@ -85,7 +85,7 @@ get_header(); ?>
 <div class="section">
   <div class="container">
     <div class="row">
-      <h2>Agriculture News Releases</h2>
+      <h2>Agriculture News Releases <small><a href="http://www.purdue.edu/newsroom/">View All News</a></small></h2>
       <?php
         $rss = new DOMDocument();
         $rss->load('http://www.purdue.edu/newsroom/rss/AgNews.xml');
