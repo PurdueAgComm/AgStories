@@ -1,7 +1,7 @@
 <?php
 /* Template for displaying all single posts */
 get_header(); ?>
-<div class="breadcrumb">
+<div class="breadcrumb hidden-xs hidden-sm hidden-md">
   <div class="container">
     <div class="row">
       <div id="breadcrumbs">
