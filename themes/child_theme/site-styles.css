@@ -72,7 +72,7 @@ h2.topstory {
 }
 
 .primarytitle{
-    min-height: 182px;
+    min-height: 214px;
     text-align: center;
     /*border-bottom: black 5px solid;*/
 }
@@ -316,6 +316,7 @@ figure.effect-ruby p {
   border-left: 3px solid #FFD100;
   padding: 10px;
   margin-top: 10px;
+  min-height: 130px;
 }
 
   .news-release:hover {
@@ -323,7 +324,7 @@ figure.effect-ruby p {
   }
 
   .news-release h4 {
-    margin-top: 0;
+    margin-top: 6px;
     padding-top: 0;
   }
 
@@ -340,4 +341,19 @@ figure.effect-ruby p {
 .exposure-heading {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:link:hover {
+    text-decoration: underline;
+}
+
+.section a div {
+    display: block;
+    white-space: normal;
+    font-weight: normal;
 }

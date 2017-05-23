@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="section">
   <div class="container">
     <div class="row">
-      <h2>Featured Stories & News</h2>
+      <h1 style="margin: 20px 0;">News & Featured Stories</h1>
       <div id="firstfeature" class="col-lg-6 primarystory">
         <div id="primaryfeature"></div>
       </div>
@@ -55,7 +55,7 @@ get_header(); ?>
         </div> <!-- /.sidenav -->
       </div>
       <div class="col-sm-8">
-      <h2>Recent Stories</h2>
+      <h2 style="margin-bottom: 10px;">Recent Stories</h2>
       <?php
         $the_query = new WP_Query( 'posts_per_page=4' );
         $output = "";
@@ -85,7 +85,7 @@ get_header(); ?>
 <div class="section">
   <div class="container">
     <div class="row">
-      <h2>Agriculture News Releases <small><a href="http://www.purdue.edu/newsroom/">View All News</a></small></h2>
+      <h2 style="margin-bottom: 10px;">Agriculture News Releases <small><a href="http://www.purdue.edu/newsroom/">View All News</a></small></h2>
       <?php
         $rss = new DOMDocument();
         $rss->load('http://www.purdue.edu/newsroom/rss/AgNews.xml');
@@ -109,7 +109,7 @@ get_header(); ?>
           // $xpath = new DOMXPath(@DOMDocument::loadHTML($description));
           // $src = $xpath->evaluate("string(//img/@src)");
 
-          echo '<div class="col-sm-2"><a style="text-decoration:none;" href="'.$link.'" title="'.$title.'"><div class="news-release"><small class="text-muted date-meta">' . $date . '</small>';
+          echo '<div class="col-sm-2" style="padding:0;"><a style="text-decoration:none;" href="'.$link.'" title="'.$title.'"><div class="news-release"><small class="text-muted date-meta">' . $date . '</small>';
           echo '<h4>' . $title . '</h4></div></a></div>';
         }
       ?>
@@ -126,7 +126,7 @@ get_header(); ?>
 <div class="section">
   <div class="container">
     <div class="row">
-      <h2>Latest Photo Galleries <small><a href="https://purdueag.exposure.co/">View All Galleries</a></small></h2>
+      <h2 style="margin-bottom: 20px;">Latest Photo Galleries <small><a href="https://purdueag.exposure.co/">View All Galleries</a></small></h2>
       <?php
         $rss = new DOMDocument();
         $rss->load('https://purdueag.exposure.co/feed.rss');
