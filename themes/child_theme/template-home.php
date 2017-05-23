@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="section">
   <div class="container">
     <div class="row">
-      <h2>Featured News & Stories</h2>
+      <h2>Featured Stories & News</h2>
       <div id="firstfeature" class="col-lg-6 primarystory">
         <div id="primaryfeature"></div>
       </div>
@@ -126,7 +126,7 @@ get_header(); ?>
 <div class="section">
   <div class="container">
     <div class="row">
-      <h2>Latest Photo Stories <small>Using <a href="https://purdueag.exposure.co/">Exposure</a></small></h2>
+      <h2>Latest Photo Galleries <small><a href="https://purdueag.exposure.co/">View All Galleries</a></small></h2>
       <?php
         $rss = new DOMDocument();
         $rss->load('https://purdueag.exposure.co/feed.rss');
