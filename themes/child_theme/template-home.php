@@ -125,6 +125,48 @@ get_header(); ?>
 </div>
 <!-- End UNS Section -->
 
+<!-- Start Destination Section -->
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <h2 style="margin-bottom: 20px;">Destination Purdue <small><a href="/stories/destination/">View All Stories By And About Our Students</a></small></h2>
+
+ <?php
+
+        $args2 = array(
+          'posts_per_page' => 3,
+          'category_name' => 'destination',       //(string) - use category slug (NOT name).
+          );
+        $the_query = new WP_Query($args2);
+        $output = "";
+        while ($the_query -> have_posts()) : $the_query -> the_post();
+          $postID = get_the_ID();
+          $link = get_the_permalink();
+          $title = get_the_title();
+          $image = get_the_post_thumbnail_url($postID, "full");
+          $output = '<div class="col-sm-4"><a href="' . $link . '"><div class="recent-story">';
+          $output .= '<img src="' . $image . '" alt="' . $title . '" class="img-responsive">';
+          $output .= '<h4 class="exposure-heading">' . $title . '</h4>';
+          $output .= "</a></div></div>";
+          // hack toDO fix.
+          if($n == 1) {
+             $output .= "<br style='clear: both;'>";
+          }
+          echo $output;
+          $n++;
+        endwhile;
+        wp_reset_postdata();
+      ?>
+
+
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- End Feature Section -->
+
+
 
 
 <!-- Start Exposure Section -->
