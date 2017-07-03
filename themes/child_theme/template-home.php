@@ -68,7 +68,12 @@ get_header(); ?>
           $output .= '<img src="' . $image . '" alt="' . $title . '" class="img-responsive">';
           $output .= '<h3>' . $title . '</h3>';
           $output .= "</a></div></div>";
+          // hack toDO fix.
+          if($n == 1) {
+             $output .= "<br style='clear: both;'>";
+          }
           echo $output;
+          $n++;
         endwhile;
         wp_reset_postdata();
       ?>
