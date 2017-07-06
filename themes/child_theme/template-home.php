@@ -57,7 +57,12 @@ get_header(); ?>
       <div class="col-sm-8">
       <h2 style="margin-bottom: 10px;">Recent Stories</h2>
       <?php
-        $the_query = new WP_Query( 'posts_per_page=4' );
+
+          $args3 = array(
+          'posts_per_page' => 4,
+          'category__not_in' => array(41),       //(string) - use category slug (NOT name).
+          );
+        $the_query = new WP_Query($args3);
         $output = "";
         while ($the_query -> have_posts()) : $the_query -> the_post();
           $postID = get_the_ID();
@@ -129,13 +134,13 @@ get_header(); ?>
 <div class="section">
   <div class="container">
     <div class="row">
-      <h2 style="margin-bottom: 20px;">Destination Purdue <small><a href="/stories/destination/">View All Stories By And About Our Students</a></small></h2>
+      <h2 style="margin-bottom: 20px;">Destination Purdue <small><a href="/stories/destination/">View All Stories By Our Students</a></small></h2>
 
  <?php
 
         $args2 = array(
           'posts_per_page' => 3,
-          'category_name' => 'destination',       //(string) - use category slug (NOT name).
+          'category_name' => 'Destination Purdue',       //(string) - use category slug (NOT name).
           );
         $the_query = new WP_Query($args2);
         $output = "";
