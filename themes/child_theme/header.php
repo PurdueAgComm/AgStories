@@ -14,7 +14,7 @@
 
 
 </title>
-<link href="favicon.ico" rel="shortcut icon"/>
+<link rel="shortcut icon" href="/Style Library/ag/images/favicon.ico" type="image/vnd.microsoft.icon" />
 <script async="true" src="https://www.purdue.edu/purdue/globals/js/modernizr-1.5.min.js" type="text/javascript"></script>
 <!-- Bootstrap core CSS -->
 <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
