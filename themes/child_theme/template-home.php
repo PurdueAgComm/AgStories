@@ -57,8 +57,13 @@ get_header(); ?>
       <div class="col-sm-8">
       <h2 style="margin-bottom: 10px;">Recent Stories</h2>
       <?php
-        $the_query = new WP_Query( 'posts_per_page=4' );
+        $the_query = new WP_Query( array(
+          "posts_per_page" => 6,
+          "category__not_in" => array(50)
+        ));
+
         $output = "";
+        $n = 0;
         while ($the_query -> have_posts()) : $the_query -> the_post();
           $postID = get_the_ID();
           $link = get_the_permalink();
@@ -69,7 +74,7 @@ get_header(); ?>
           $output .= '<h3>' . $title . '</h3>';
           $output .= "</a></div></div>";
           // hack toDO fix.
-          if($n == 1) {
+          if($n == 1 || $n == 3) {
              $output .= "<br style='clear: both;'>";
           }
           echo $output;
