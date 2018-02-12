@@ -3257,7 +3257,7 @@ Tags: Responsive, Bootstrap, Purdue, 2014, Font Awesome, Advanced Custom Fields,
 
 .shader{
   background-color:rgba(0,0,0,.6);
-  margin-top: 30%;
+  margin-top: 23%;
   padding: 2em;
 }
 .fullwidthheader{
@@ -3287,7 +3287,7 @@ Tags: Responsive, Bootstrap, Purdue, 2014, Font Awesome, Advanced Custom Fields,
  height: 250px;
 }
 .shader{
-margin-top: 10%;
+margin-top: 30%;
 }
 .fullwidthheader{
 font-size: 1.5em;
@@ -3300,7 +3300,7 @@ font-size: 1em;
 
 @media (max-width: 400px){
 .shader{
-margin-top:5%;
+margin-top:30%;
 }
 }
 
