@@ -15,38 +15,38 @@ $podcast_type = $term->name;
 
 if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
     if($podcast_type == "Dr. Tim's Spineless Wonders") {
-      $podcastBanner = "/stories/themes/child_theme/podcasts/wonders.jpg";
+      $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/wonders.jpg";
       $podcastAuthor = "Dr. Tim Gibb, <a href='mailto:gibb@purdue.edu'>gibb@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
       $podcastArchive = "/stories/columns/dr-tims-spineless-wonders/";
     }
     else if ($podcast_type == "Barn Chatter")  {
-      $podcastBanner = "/stories/themes/child_theme/podcasts/chatter.jpg";
+      $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/chatter.jpg";
       $podcastAuthor = "Aaron Fisher, <a href='mailto:fisher86@purdue.edu'>fisher86@purdue.edu</a>";
       $podcastEditor = "Nancy Alexander, <a href='mailto:alexa183@purdue.edu'>alexa183@purdue.edu</a>";
     }
     else if ($podcast_type == "Capital Comments")  {
-      $podcastBanner = "/stories/themes/child_theme/podcasts/comments.jpg";
+      $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/comments.jpg";
       $podcastAuthor = "Larry DeBoer, <a href='mailto:ldeboer@purdue.edu'>ldeboer@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
     }
     else if ($podcast_type == "In The Grow")  {
-      $podcastBanner = "/stories/themes/child_theme/podcasts/grow.jpg";
+      $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/grow.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
     }
     else if ($podcast_type == "The 4th H")  {
-      $podcastBanner = "/stories/themes/child_theme/podcasts/4h.jpg";
+      $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/4h.jpg";
       $podcastAuthor = "Aaron Fisher, <a href='mailto:fisher86@purdue.edu'>fisher86@purdue.edu</a>";
       $podcastEditor = "Nancy Alexander, <a href='mailto:alexa183@purdue.edu'>alexa183@purdue.edu</a>";
     }
     else if ($podcast_type == "Yard & Garden Calendar")  {
-      $podcastBanner = "/stories/themes/child_theme/podcasts/calendar.jpg";
+      $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/calendar.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
     }
     else if ($podcast_type == "Yard & Garden News")  {
-      $podcastBanner = "/stories/themes/child_theme/podcasts/news.jpg";
+      $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/news.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
     }

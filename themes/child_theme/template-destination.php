@@ -26,25 +26,33 @@ get_header(); ?>
 
  <?php
         $args2 = array(
-          'tag' => 'fall-2017',  //UPDATE THIS!!!! USE CURRENT TAG
+          'tag' => 'spring-2018',  //UPDATE THIS!!!! USE CURRENT TAG
           'category_name' => 'Destination Purdue',       //(string) - use category slug (NOT name).
-          'orderby' => 'ID',
+          'orderby' => 'modified',
           'order'   => 'ASC',
           'posts_per_page' => -1,
           );
         $the_query = new WP_Query($args2);
         $output = "";
+        $i = 1;
         while ($the_query -> have_posts()) : $the_query -> the_post();
           $postID = get_the_ID();
           $link = get_the_permalink();
           $title = get_the_title();
           $image = get_the_post_thumbnail_url($postID, "full");
-          $output = '<div class="col-sm-4" style="min-height: 215px;"><a href="' . $link . '"><div class="recent-story">';
+          if($i%3 == 0) :
+            $output .= '<div class="row">';
+          endif;
+          $output .= '<div class="col-sm-4" style=""><a href="' . $link . '"><div class="recent-story">';
           $output .= '<img src="' . $image . '" alt="' . $title . '" class="img-responsive">';
           $output .= '<h4 class="exposure-heading">' . $title . '</h4>';
           $output .= "</a></div></div>";
-          echo $output;
+          if($i%3 == 0) :
+            $output .= '</div>';
+          endif;
+          $i++;
         endwhile;
+        echo $output;
         wp_reset_postdata();
       ?>
 
@@ -64,22 +72,30 @@ get_header(); ?>
 
  <?php
         $args3 = array(
-          'tag__not_in' => array(42),   //UPDATE THIS!!!! USE CURRENT TAG
+          'tag__not_in' => array(81),   //UPDATE THIS!!!! USE CURRENT TAG
           'category_name' => 'Destination Purdue',       //(string) - use category slug (NOT name).
           );
         $the_query = new WP_Query($args3);
         $output = "";
+        $i = 1;
         while ($the_query -> have_posts()) : $the_query -> the_post();
           $postID = get_the_ID();
           $link = get_the_permalink();
           $title = get_the_title();
           $image = get_the_post_thumbnail_url($postID, "full");
-          $output = '<div class="col-sm-3" style="margin-bottom:20px;"><a href="' . $link . '"><div class="recent-story">';
+          if($i%4 == 0) :
+            $output .= '<div class="row">';
+          endif;
+          $output .= '<div class="col-sm-3" style="margin-bottom:20px;"><a href="' . $link . '"><div class="recent-story">';
           $output .= '<img src="' . $image . '" alt="' . $title . '" class="img-responsive">';
           $output .= '<h4 class="exposure-heading">' . $title . '</h4>';
           $output .= "</a></div></div>";
-          echo $output;
+          if($i%4 == 0) :
+            $output .= '</div>';
+          endif;
+          $i++;
         endwhile;
+        echo $output;
         wp_reset_postdata();
       ?>
 
