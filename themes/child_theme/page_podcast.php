@@ -9,7 +9,7 @@
     </div>
   </div>
 </div>
-asdfasdfasdfasdfasdfasdfasdfasdf
+
 <div class="container">
   <div class="row">
     <div class="maincontent col-lg-12 col-md-12 col-sm-12">

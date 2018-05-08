@@ -51,13 +51,13 @@ if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
       $podcastEditor = "Nancy Alexander, <a href='mailto:alexa183@purdue.edu'>alexa183@purdue.edu</a>";
       $podcastArchive = "/stories/columns/the-4th-h/";
     }
-    else if ($type[0] == "Yard & Garden Calendar")  {
+    else if ($type[0] == "Yard &amp; Garden Calendar")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/calendar.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
       $podcastArchive = "/stories/columns/yard-garden-calendar/";
     }
-    else if ($type[0] == "Yard & Garden News")  {
+    else if ($type[0] == "Yard &amp; Garden News")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/news.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
@@ -67,7 +67,6 @@ if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
 
 
 ?>
-
 
 <div class="landing" style="background-image: url('<?php echo $podcastBanner; ?>')">
   <div class="container">

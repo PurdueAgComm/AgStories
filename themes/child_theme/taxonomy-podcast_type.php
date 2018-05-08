@@ -40,12 +40,12 @@ if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
       $podcastAuthor = "Aaron Fisher, <a href='mailto:fisher86@purdue.edu'>fisher86@purdue.edu</a>";
       $podcastEditor = "Nancy Alexander, <a href='mailto:alexa183@purdue.edu'>alexa183@purdue.edu</a>";
     }
-    else if ($podcast_type == "Yard & Garden Calendar")  {
+    else if ($podcast_type == "Yard &amp; Garden Calendar")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/calendar.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
     }
-    else if ($podcast_type == "Yard & Garden News")  {
+    else if ($podcast_type == "Yard &amp; Garden News")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/news.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
