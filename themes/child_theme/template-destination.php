@@ -7,15 +7,6 @@
 
 get_header(); ?>
 
-<!--   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        'Ello Poppet
-      </div>
-    </div>
-  </div> -->
-
-
 <!-- Start Current Destination Section -->
 <div class="section">
   <div class="container">
@@ -26,7 +17,7 @@ get_header(); ?>
 
  <?php
         $args2 = array(
-          'tag' => 'spring-2018',  //UPDATE THIS!!!! USE CURRENT TAG
+          'tag' => 'fall-2018',  //UPDATE THIS!!!! USE CURRENT TAG
           'category_name' => 'Destination Purdue',       //(string) - use category slug (NOT name).
           'orderby' => 'modified',
           'order'   => 'ASC',
@@ -72,7 +63,7 @@ get_header(); ?>
 
  <?php
         $args3 = array(
-          'tag__not_in' => array(81),   //UPDATE THIS!!!! USE CURRENT TAG
+          'tag__not_in' => array(106),   //UPDATE THIS!!!! USE CURRENT TAG
           'category_name' => 'Destination Purdue',       //(string) - use category slug (NOT name).
           );
         $the_query = new WP_Query($args3);

@@ -60,7 +60,8 @@ get_header(); ?>
 
         $the_query = new WP_Query( array(
           "posts_per_page" => 6,
-          "category__not_in" => array(50)
+          "category__not_in" => array(50), // ignore news from UNS
+          "tag__not_in" => array(112, 113, 114, 115, 116, 117, 118, 119) // ignore all student success stories
         ));
 
         $output = "";
@@ -130,6 +131,47 @@ get_header(); ?>
   <!-- /.container -->
 </div>
 <!-- End UNS Section -->
+
+<!-- Start Podcast Section -->
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <h2 style="margin-bottom: 20px;">Recent Columns & Podcasts <small><a href="https://ag.purdue.edu/stories/podcasts/">View All Columns & Podcasts</a></small></h2>
+
+ <?php
+
+        $args2 = array(
+          'post_type' => 'podcast',
+          'posts_per_page' => 6,
+        );
+        $the_query = new WP_Query($args2);
+        $output = "";
+        while ($the_query -> have_posts()) : $the_query -> the_post();
+          $postID = get_the_ID();
+          $link = get_the_permalink();
+          $title = get_the_title();
+          $term = get_the_terms( $postID, 'podcast_type' );
+          $terms_string = join(', ', wp_list_pluck($term, 'name'));
+          $image = get_the_post_thumbnail_url($postID, "full");
+          $output = '<div class="col-sm-2" style="padding:0;"><a style="text-decoration:none;" href="'.$link.'" title="'.$title.'"><div class="news-release" style="border-color: #6E99B4;"><small class="text-muted date-meta">' . $terms_string . '</small>';
+          $output .= '<h4>' . $title . '</h4></div></a></div>';
+          //$output = '<div class="col-sm-4"><a href="' . $link . '"><div class="recent-story">';
+          //$output .= '<img src="' . $image . '" alt="' . $title . '" class="img-responsive">';
+          //$output .= '<h4 class="exposure-heading">' . $title . '</h4>';
+          //$output .= "</a></div></div>";
+          echo $output;
+          $n++;
+        endwhile;
+        wp_reset_postdata();
+      ?>
+
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- End Feature Section -->
+
 
 <!-- Start Destination Section -->
 <div class="section">

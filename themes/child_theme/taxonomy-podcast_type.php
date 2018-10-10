@@ -19,6 +19,7 @@ if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
       $podcastAuthor = "Dr. Tim Gibb, <a href='mailto:gibb@purdue.edu'>gibb@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
       $podcastArchive = "/stories/columns/dr-tims-spineless-wonders/";
+      $podcastemail = "spineless";
     }
     else if ($podcast_type == "Barn Chatter")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/chatter.jpg";
@@ -29,11 +30,13 @@ if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/comments.jpg";
       $podcastAuthor = "Larry DeBoer, <a href='mailto:ldeboer@purdue.edu'>ldeboer@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
+      $podcastemail = "capital";
     }
     else if ($podcast_type == "In The Grow")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/grow.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
+      $podcastemail = "garden";
     }
     else if ($podcast_type == "The 4th H")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/4h.jpg";
@@ -44,11 +47,13 @@ if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/calendar.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
+      $podcastemail = "garden";
     }
     else if ($podcast_type == "Yard &amp; Garden News")  {
       $podcastBanner = "/stories/wp-content/themes/child_theme/podcasts/news.jpg";
       $podcastAuthor = "B. Rosie Lerner, <a href='mailto:rosie@purdue.edu'>rosie@purdue.edu</a>";
       $podcastEditor = "Kevin Leigh Smith, <a href='mailto:smith79@purdue.edu'>smith79@purdue.edu</a>";
+      $podcastemail = "garden";
     }
 }
 ?>
@@ -72,8 +77,38 @@ if ( ! empty( $podcast_type ) && ! is_wp_error( $podcast_type ) ) {
     <div class="maincontent col-md-9 right">
     <h1><?php single_cat_title(); ?></h1>
     <br>
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if($podcastemail) : ?>
+        <div class="row post-bg" style="border-right: 7px solid #6E99B4;">
+          <div class="col-sm-12">
+            <h3><i class="fa fa-envelope fa-fw"></i> Receive <?php echo $podcast_type; ?> in your inbox!</h3>
+            <p>It's fast and easy! Subscribe below by entering your email address. You'll receive our podcast monthly and you can unsubscribe any time &mdash; and rest assured &mdash; we won't ever sell or give your email address away.</p>
+            <script language="javascript" type="text/javascript" src="https://editor.ne16.com/Subscribe/Subscribe.js"></script>
+            <form class="form-inline" action="https://editor.ne16.com/Subscribe/Subscribe.ashx" method="POST">
+              <div class="form-group mb-2 col-sm-6">
+                <label for="staticEmail2" class="sr-only">Email</label>
+                <input name="emailaddr_" required="" class="demographic fieldInput form-control" style="width: 100%;" type="textbox">
+              </div>
+              <button data-type="save" class="btn btn-primary mb-2" type="submit" name="save">Subscribe!</button>
+              <input name="demographics" value="emailaddr_ Source_" type="hidden">
+              <input class="hidden demographic" name="Source_" value="Subscribe Form" type="hidden">
+              <input type="hidden" name="list" value="purdue-newscolumns" />
+              <input type="hidden" id="DlvListID" value="122737" />
+              <input type="hidden" id="DlvWebFormID" value="b06bad94-4781-4990-b26f-a61a10b3be31" />
+              <?php if($podcastemail == "spineless") : ?>
+                <input type="hidden" class="hidden" name="category" value="Spineless Wonders Subscribers">
+              <?php elseif($podcastemail == "capital") : ?>
+                <input type="hidden" class="hidden" name="category" value="Capital Comments Subscribers">
+              <?php elseif($podcastemail == "garden") : ?>
+                <input type="hidden" class="hidden" name="category" value="Garden Column Subscribers">
+              <?php endif; ?>
+            </form>
+            </form>
+          </div>
+        </div>
+      <?php endif; ?>
 
+
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div class="row post-bg" style="border-right: 7px solid gold;">
         <?php if(has_post_thumbnail()) : ?>
         <div class="col-sm-5">

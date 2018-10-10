@@ -21,7 +21,11 @@
 <div class="container">
   <div class="row">
     <div class="maincontent col-md-9 right">
-    <h1><?php single_cat_title(); ?></h1>
+      <?php if(is_category("giant-leaps")) : ?>
+        <img src="https://ag.purdue.edu/PublishingImages/150-years-header.png" alt="Gian Leaps Logo" />
+      <?php else : ?>
+        <h1><?php single_cat_title(); ?></h1>
+      <?php endif; ?>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
       <div class="row post-bg" style="border-right: 7px solid gold;">
